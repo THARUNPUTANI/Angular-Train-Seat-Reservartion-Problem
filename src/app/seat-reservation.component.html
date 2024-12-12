@@ -1,0 +1,16 @@
+<div class="seat-layout">
+<div *ngFor="let row of seats | groupBy: 'rowNumber'">
+  <div class="row">
+    <span *ngFor="let seat of row" [class.booked]="!seat.available">
+      {{ seat.available ? 'A' : 'B' }}
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="actions">
+<input type="number" #seatInput placeholder="Enter number of seats to book (1-7)" />
+<button (click)="bookSeats(seatInput.value)">Book Seats</button>
+</div>
+
+<p>{{ message }}</p>

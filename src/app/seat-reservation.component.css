@@ -1,0 +1,16 @@
+.seat-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.booked {
+  color: red;
+}
+
+.actions {
+  margin-top: 20px;
+}
